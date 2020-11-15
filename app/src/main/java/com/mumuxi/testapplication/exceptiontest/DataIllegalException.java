@@ -6,6 +6,7 @@ package com.mumuxi.testapplication.exceptiontest;
  * 自定义异常
  */
 public class DataIllegalException extends Exception {
+    
     public static final String EXCEPTION_MESSAGE = "自定义异常";
     private static final long serialVersionUID = 1L;
 
@@ -18,12 +19,14 @@ public class DataIllegalException extends Exception {
      * Exception 类的错误是可以在应用程序中进行捕获并处理的，通常遇到这种错误，应对其进行处理，
      * 使应用程序可以继续正常运行。
      * <p>
+     *
      * 2. 运行时异常和一般异常区别是什么？
      * 编译器不会对运行时异常进行检测，没有 try-catch，方法签名中也没有 throws 关键字声明，
      * 编译依然可以通过。如果出现了 RuntimeException, 那一定是程序员的错误。
      * 一般异常如果没有 try-catch，且方法签名中也没有用 throws 关键字声明可能抛出的异常，
      * 则编译无法通过。这类异常通常为应用环境中的错误，即外部错误，非应用程序本身错误，如文件找不到等。
      * <p>
+     *
      * 3.NoClassDefFoundError 和 ClassNotFoundException 区别？
      * NoClassDefFoundError 是一个 Error 类型的异常，是由 JVM 引起的，不应该尝试捕获这个异常。
      * 引起该异常的原因是 JVM 或 ClassLoader 尝试加载某类时在内存中找不到该类的定义，
@@ -34,6 +37,7 @@ public class DataIllegalException extends Exception {
      * 就会抛出该异常；另一种抛出该异常的可能原因是某个类已经由一个类加载器加载至内存中，
      * 另一个加载器又尝试去加载它。
      * <p>
+     *
      * 4. JVM 是如何处理异常的？
      * 在一个方法中如果发生异常，这个方法会创建一个一场对象，并转交给 JVM，该异常对象包含异常名称，
      * 异常描述以及异常发生时应用程序的状态。创建异常对象并转交给 JVM 的过程称为抛出异常。
@@ -44,12 +48,14 @@ public class DataIllegalException extends Exception {
      * JVM 就会将该异常转交给默认的异常处理器（默认处理器为 JVM 的一部分），
      * 默认异常处理器打印出异常信息并终止应用程序。
      * <p>
+     *
      * 5. throw 和 throws 的区别是什么？
      * throw 关键字用来抛出方法或代码块中的异常，受查异常和非受查异常都可以被抛出。
      * throws 关键字用在方法签名处，用来标识该方法可能抛出的异常列表。
      * 一个方法用 throws 标识了可能抛出的异常列表，调用该方法的方法中必须包含可处理异常的代码，
      * 否则也要在方法签名中用 throws 关键字声明相应的异常。
      * <p>
+     *
      * 6. 常见的 RuntimeException 有哪些？
      * ClassCastException(类转换异常)
      * IndexOutOfBoundsException(数组越界)
@@ -57,6 +63,7 @@ public class DataIllegalException extends Exception {
      * ArrayStoreException(数据存储异常，操作数组时类型不一致)
      * 还有IO操作的BufferOverflowException异常
      */
+
     public DataIllegalException() {
         super(EXCEPTION_MESSAGE);
     }

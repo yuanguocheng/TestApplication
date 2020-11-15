@@ -1,22 +1,4 @@
-/*
- * Copyright (C) 2017 Beijing Didi Infinity Technology and Development Co.,Ltd. All rights reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.mumuxi.testapplication.javabase.utils;
-
-import com.mumuxi.testapplication.android.utils.LogUtil;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -24,42 +6,81 @@ import java.lang.reflect.Method;
 
 
 /**
- * 反射工具
- */
+ * @author mumuxi
+ * @date   2020/11/15
+ * 反射工具，参考滴滴VirtualApk框架
+*/
 @SuppressWarnings("rawtypes")
 public class ReflectUtil {
 
+    /**
+     * 获取指定对象的某成员变量
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 成员变量名称
+     * @return 返回需要的成员变量
+     * @throws Exception
+     */
     public static Object getField(Class clazz, Object target, String name) throws Exception {
         Field field = clazz.getDeclaredField(name);
         field.setAccessible(true);
         return field.get(target);
     }
 
+    /**
+     * 获取指定对象的某成员变量
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 成员变量名称
+     * @return 返回需要的成员变量
+     */
     public static Object getFieldNoException(Class clazz, Object target, String name) {
         try {
             return ReflectUtil.getField(clazz, target, name);
         } catch (Exception e) {
-            LogUtil.w("ygc", "-----exception happen");
             e.printStackTrace();
         }
         return null;
     }
 
+    /**
+     * 设置指定对象的某成员变量
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 成员变量名称
+     * @param value 需要设置的值
+     * @throws Exception
+     */
     public static void setField(Class clazz, Object target, String name, Object value) throws Exception {
         Field field = clazz.getDeclaredField(name);
         field.setAccessible(true);
         field.set(target, value);
     }
 
+    /**
+     * 设置指定对象的某成员变量
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 成员变量名称
+     * @param value 需要设置的值
+     */
     public static void setFieldNoException(Class clazz, Object target, String name, Object value) {
         try {
             ReflectUtil.setField(clazz, target, name, value);
         } catch (Exception e) {
-            LogUtil.w("ygc", "-----exception happen");
             e.printStackTrace();
         }
     }
 
+    /**
+     * 通过放射调用某对象隐藏的方法
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 方法名称
+     * @param args 需要传入的参数
+     * @return
+     * @throws Exception
+     */
     @SuppressWarnings("unchecked")
     public static Object invoke(Class clazz, Object target, String name, Object... args)
             throws Exception {
@@ -76,6 +97,16 @@ public class ReflectUtil {
         return method.invoke(target, args);
     }
 
+    /**
+     * 通过放射调用某对象隐藏的方法
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 方法名称
+     * @param parameterTypes 需要传入的参数的类数组
+     * @param args 需要传入的参数
+     * @return
+     * @throws Exception
+     */
     @SuppressWarnings("unchecked")
     public static Object invoke(Class clazz, Object target, String name, Class[] parameterTypes, Object... args)
             throws Exception {
@@ -84,18 +115,36 @@ public class ReflectUtil {
         return method.invoke(target, args);
     }
 
+
+    /**
+     * 通过放射调用某对象隐藏的方法
+     * @param clazz 该对象的类对象
+     * @param target 指定对象实例
+     * @param name 方法名称
+     * @param parameterTypes 需要传入的参数的类数组
+     * @param args 需要传入的参数
+     * @return
+     * @throws Exception
+     */
     @SuppressWarnings("unchecked")
     public static Object invokeNoException(Class clazz, Object target, String name, Class[] parameterTypes, Object... args) {
         try {
             return invoke(clazz, target, name, parameterTypes, args);
         } catch (Exception e) {
-            LogUtil.w("ygc", "-----exception happen");
             e.printStackTrace();
         }
 
         return null;
     }
 
+    /**
+     * 通过反射某类的构造函数来创建一个实例
+     * @param clazz 该对象的类对象
+     * @param parameterTypes 需要传入的参数的类数组
+     * @param args 需要传入的参数
+     * @return
+     * @throws Exception
+     */
     @SuppressWarnings("unchecked")
     public static Object invokeConstructor(Class clazz, Class[] parameterTypes, Object... args)
             throws Exception {
