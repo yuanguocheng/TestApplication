@@ -11,16 +11,16 @@
         android:id="@+id/btn_test_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TestActivity"
+        android:layout_marginTop="20dp"
+        android:text="Start TestActivity"
         android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/sample_text"
+    <Button
+        android:id="@+id/btn_exit_application"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:singleLine="false"
         android:layout_marginTop="20dp"
-        android:text="Hello World!" />
+        android:text="Exit Application"
+        android:textSize="20sp" />
 
 </LinearLayout>
