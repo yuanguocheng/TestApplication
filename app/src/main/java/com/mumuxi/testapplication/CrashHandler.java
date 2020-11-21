@@ -1,10 +1,8 @@
-package com.mumuxi.testapplication.exceptiontest;
+package com.mumuxi.testapplication;
 
 import android.content.Context;
 import android.os.Process;
 import android.util.Log;
-
-import com.mumuxi.testapplication.BuildConfig;
 
 /**
  * @author mumuxi
