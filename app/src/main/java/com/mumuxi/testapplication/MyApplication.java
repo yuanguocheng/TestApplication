@@ -12,7 +12,8 @@ import com.mumuxi.testapplication.android.utils.LogUtil;
 public class MyApplication extends Application {
 
     public static final String TAG = MyApplication.class.getSimpleName();
-    MyActivityManager mMyActivityManager;
+
+    private MyActivityManager mMyActivityManager;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -23,7 +24,9 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         LogUtil.d(TAG, "onCreate");
+
         CrashHandler.getInstance().init(this);
+
         mMyActivityManager = new MyActivityManager();
         registerActivityLifecycleCallbacks(mMyActivityManager);
     }
@@ -31,4 +34,5 @@ public class MyApplication extends Application {
     public void exit() {
         mMyActivityManager.exit();
     }
+
 }

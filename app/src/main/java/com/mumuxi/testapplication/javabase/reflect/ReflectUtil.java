@@ -1,4 +1,4 @@
-package com.mumuxi.testapplication.javabase.utils;
+package com.mumuxi.testapplication.javabase.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -73,7 +73,7 @@ public class ReflectUtil {
     }
 
     /**
-     * 通过放射调用某对象隐藏的方法
+     * 通过反射调用某对象隐藏的方法
      * @param clazz 该对象的类对象
      * @param target 指定对象实例
      * @param name 方法名称
@@ -98,7 +98,7 @@ public class ReflectUtil {
     }
 
     /**
-     * 通过放射调用某对象隐藏的方法
+     * 通过反射调用某对象隐藏的方法
      * @param clazz 该对象的类对象
      * @param target 指定对象实例
      * @param name 方法名称
@@ -117,7 +117,7 @@ public class ReflectUtil {
 
 
     /**
-     * 通过放射调用某对象隐藏的方法
+     * 通过反调用某对象隐藏的方法
      * @param clazz 该对象的类对象
      * @param target 指定对象实例
      * @param name 方法名称

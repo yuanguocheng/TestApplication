@@ -11,8 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".android.optimize.MemoryOptimizeTest"></activity>
-        <activity android:name=".MainActivity"
+        <activity android:name=".android.optimize.MemoryOptimizeTest" />
+
+        <activity
+            android:name=".MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".android.fourcomponent.activity.TestActivity" />
-
         <activity android:name=".android.fourcomponent.activity.TestActivity2" />
+        <provider
+            android:name=".android.fourcomponent.contentprovider.BookContentProvider"
+            android:authorities="com.mumuxi.testapplication.BookContentProvider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
         <service
             android:name=".android.fourcomponent.service.MyService"
             android:enabled="true"

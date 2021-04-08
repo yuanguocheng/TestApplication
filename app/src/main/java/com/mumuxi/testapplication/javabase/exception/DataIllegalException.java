@@ -61,7 +61,7 @@ package com.mumuxi.testapplication.javabase.exception;
  */
 public class DataIllegalException extends Exception {
     
-    public static final String EXCEPTION_MESSAGE = "自定义异常";
+    public static final String EXCEPTION_MESSAGE = "数据异常";
     private static final long serialVersionUID = 1L;
 
     public DataIllegalException() {
