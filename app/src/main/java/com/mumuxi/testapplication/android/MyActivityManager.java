@@ -1,4 +1,4 @@
-package com.mumuxi.testapplication;
+package com.mumuxi.testapplication.android;
 
 import android.app.Activity;
 import android.app.Application;

@@ -1,8 +1,10 @@
-package com.mumuxi.testapplication;
+package com.mumuxi.testapplication.android;
 
 import android.content.Context;
 import android.os.Process;
 import android.util.Log;
+
+import com.mumuxi.testapplication.BuildConfig;
 
 /**
  * @author mumuxi

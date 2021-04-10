@@ -1,4 +1,4 @@
-package com.mumuxi.testapplication;
+package com.mumuxi.testapplication.android;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.mumuxi.testapplication.R;
 import com.mumuxi.testapplication.android.fourcomponent.activity.TestActivity;
 import com.mumuxi.testapplication.android.utils.LogUtil;
 

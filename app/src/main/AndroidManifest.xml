@@ -3,7 +3,7 @@
     package="com.mumuxi.testapplication">
 
     <application
-        android:name=".MyApplication"
+        android:name=".android.MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +14,7 @@
         <activity android:name=".android.optimize.MemoryOptimizeTest" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".android.MainActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

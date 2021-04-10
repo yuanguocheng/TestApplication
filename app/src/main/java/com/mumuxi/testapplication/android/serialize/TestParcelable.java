@@ -1,4 +1,4 @@
-package com.mumuxi.testapplication.ipc;
+package com.mumuxi.testapplication.android.serialize;
 
 import android.os.Parcel;
 import android.os.Parcelable;

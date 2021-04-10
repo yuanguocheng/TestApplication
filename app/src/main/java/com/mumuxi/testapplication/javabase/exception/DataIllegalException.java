@@ -3,7 +3,7 @@ package com.mumuxi.testapplication.javabase.exception;
 /**
  * @author mumuxi
  * @date 2019/7/8
- * 自定义异常
+ * 自定义异常,抛出明确的异常类型，方便分析问题和给用户不同的提示
  *
  * 面试常见问题
  *
