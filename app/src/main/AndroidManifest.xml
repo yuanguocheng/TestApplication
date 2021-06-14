@@ -24,11 +24,6 @@
         </activity>
         <activity android:name=".android.fourcomponent.activity.TestActivity" />
         <activity android:name=".android.fourcomponent.activity.TestActivity2" />
-        <provider
-            android:name=".android.fourcomponent.contentprovider.BookContentProvider"
-            android:authorities="com.mumuxi.testapplication.BookContentProvider"
-            android:enabled="true"
-            android:exported="true"></provider>
 
         <service
             android:name=".android.fourcomponent.service.MyService"

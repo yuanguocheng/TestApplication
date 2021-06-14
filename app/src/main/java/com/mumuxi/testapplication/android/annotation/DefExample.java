@@ -37,11 +37,13 @@ public class DefExample {
         return day;
     }
 
+
+
     public static final String TAG_DAY_SELECTED = "daySelected";
     public static final String TAG_GOOD_LIFE = "goodLife";
     public static final String TAG_RECOMMEND_BOOK = "recommendBook";
 
-    @Retention(RetentionPolicy.SOURCE) //默认注解
+    @Retention(RetentionPolicy.SOURCE)
     //这里使用@StringDef来代替Enum枚举。它会帮我检测像Enum枚举一样，在编译时期检查变量的赋值情况！
     @StringDef({TAG_DAY_SELECTED, TAG_GOOD_LIFE, TAG_RECOMMEND_BOOK})
     //接口定义
