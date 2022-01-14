@@ -9,6 +9,25 @@ import java.lang.reflect.Method;
  * @author mumuxi
  * @date   2020/11/15
  * 反射工具，参考滴滴VirtualApk框架
+ *
+ * 1.什么是反射？
+ * 对于任意一个对象，都能够调用它的任意方法和属性；
+ * 这种动态获取信息以及动态调用对象方法的功能称为java语言的反射机制。
+ *
+ * 2.Java反射机制主要提供了以下功能：
+ *
+ * a.获取任意类的名称、package 信息、所有属性、方法、注解、类型、
+ * 类加载器、modifiers（public、static）、父类、现实接口等
+ * b.获取任意对象的属性，并且能改变对象的属性
+ * c.调用任意对象的方法
+ * d.判断任意一个对象所属的类
+ * e.实例化任意一个类的对象
+ * f.生成动态代理。
+ *
+ * 3.Java 的动态就体现在反射。通过反射我们可以实现动态装配，
+ * 降低代码的耦合度；动态代理等。反射的过度使用会严重消耗系统资源
+ *
+ *
 */
 @SuppressWarnings("rawtypes")
 public class ReflectUtil {
