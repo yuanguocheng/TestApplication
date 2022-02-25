@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 
 /**
  * @author mumuxi
- * @date 2019/7/9
+ * @version 2019/7/9
  * <p>
  * 1.生命周期
  * 2.onWindowFocusChanged方法妙用

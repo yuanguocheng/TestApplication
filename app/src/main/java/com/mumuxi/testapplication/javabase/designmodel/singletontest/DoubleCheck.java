@@ -1,8 +1,12 @@
 package com.mumuxi.testapplication.javabase.designmodel.singletontest;
+
 /**
- * Created by mumuxi on 2019/7/4
  * Double Check Lock
+ * <p>
  * 优点：需要时才进行实例化，且保证线程安全，对象实例化之后调用getInstance不进行同步锁
+ *
+ * @author mumuxi
+ * @version 2022/2/25
  */
 public class DoubleCheck {
 

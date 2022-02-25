@@ -7,9 +7,10 @@ import android.util.Log;
 import com.mumuxi.testapplication.BuildConfig;
 
 /**
- * @author mumuxi
- * @date 2019/7/8
  * 定义CrashHandler监听应用的crash信息
+ *
+ * @author mumuxi
+ * @version 2019/7/8
  */
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
 

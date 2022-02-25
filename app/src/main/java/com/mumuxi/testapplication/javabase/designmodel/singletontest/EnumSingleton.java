@@ -1,7 +1,8 @@
 package com.mumuxi.testapplication.javabase.designmodel.singletontest;
+
 /**
- * Created by mumuxi on 2019/7/4
- * 枚举类单利
+ * @author mumuxi
+ * @version 2022/2/25
  */
 public enum EnumSingleton {
     INSTANCE;

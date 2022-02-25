@@ -6,15 +6,16 @@ import java.lang.reflect.Proxy;
 
 /**
  * @author mumuxi
- * @date 2022/1/13
+ * @version 2022/1/13
  */
 class MyInvocationHandler implements InvocationHandler {
 
     Object obj;
 
-    public Object getProxy(Object obj){
+    public Object getProxy(Object obj) {
         this.obj = obj;
-        return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), this);
+        return Proxy.newProxyInstance(obj.getClass().getClassLoader(),
+                obj.getClass().getInterfaces(), this);
     }
 
     @Override

@@ -6,8 +6,7 @@ import com.mumuxi.testapplication.BuildConfig;
 
 /**
  * @author mumuxi
- * @date 2020/11/15
- * log工具
+ * @version 2020/11/15
  */
 
 public class LogUtil {

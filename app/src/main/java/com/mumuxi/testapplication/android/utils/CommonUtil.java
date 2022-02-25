@@ -15,8 +15,8 @@ import java.util.concurrent.Executor;
 import androidx.annotation.NonNull;
 
 /**
- * Create By mumuxi On 2019-3-10
- * 通用工具
+ * @author mumuxi
+ * @version 2022/2/25
  */
 public class CommonUtil {
 

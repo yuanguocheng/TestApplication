@@ -7,6 +7,10 @@ import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
 
+/**
+ * @author mumuxi
+ * @version 2022/2/25
+ */
 public class MyService extends Service {
 
     private static final String TAG = MyService.class.getSimpleName();

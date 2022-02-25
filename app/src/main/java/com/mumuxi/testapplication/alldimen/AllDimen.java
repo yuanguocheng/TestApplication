@@ -2,11 +2,14 @@ package com.mumuxi.testapplication.alldimen;
 
 /**
  * 适配所有分辨率
- * 使用前需关闭项目的aapt自动化打包
+ * <p>
+ * 使用前需关闭项目的aapt自动化打包 <br>
+ * 解决方案 在gradle.properties中添加如下代码，禁用aapt2编译 <br>
+ * android.enableAapt2=false <br>
+ * 可以参考这个来生成一些文件
  *
- *解决方案 在gradle.properties中添加如下代码，禁用aapt2编译
-  android.enableAapt2=false
- * Created by mumuxi on 2018-4-11. 可以参考这个来生成一些文件
+ * @author mumuxi
+ * @version 2022/2/24
  */
 
 import java.io.File;
@@ -15,6 +18,7 @@ import java.io.FileOutputStream;
 import java.io.PrintWriter;
 
 public class AllDimen {
+
     private final static String rootPath = "./app/src/main/res/values-{0}x{1}";
 
     private final static float dw = 1920f;
@@ -24,25 +28,14 @@ public class AllDimen {
     private final static String HTemplate = "<dimen name=\"h{0}\">{1}px</dimen>\n";
 
     public static void main(String[] args) {
-        /*makeString(320, 480);
-        makeString(480, 800);
-        makeString(480, 854);
-        makeString(540, 960);*/
-       /* makeString(600, 1024);
-        makeString(720, 1184);
-        makeString(720, 1196);
-        makeString(720, 1280);
-        makeString(768, 1024);
-        makeString(800, 1280);
-        makeString(1080, 1812);
-        makeString(1080, 1920);
-        makeString(1440, 2560);*/
+
         makeString(854, 480);
         makeString(1280, 720);
         makeString(1920, 1080);
         makeString(2560, 1440);
         makeString(3840, 2160);
         makeString(4096, 3112);
+
     }
 
     public static void makeString(int w, int h) {
@@ -52,8 +45,7 @@ public class AllDimen {
         sb.append("<resources>");
         float cellw = w / dw;
         for (int i = 1; i < 1920; i++) {
-            sb.append(WTemplate.replace("{0}", i + "").replace("{1}",
-                    change(cellw * i) + ""));
+            sb.append(WTemplate.replace("{0}", i + "").replace("{1}", change(cellw * i) + ""));
         }
         sb.append(WTemplate.replace("{0}", "1920").replace("{1}", w + ""));
         sb.append("</resources>");
@@ -63,8 +55,7 @@ public class AllDimen {
         sb2.append("<resources>");
         float cellh = h / dh;
         for (int i = 1; i < 1080; i++) {
-            sb2.append(HTemplate.replace("{0}", i + "").replace("{1}",
-                    change(cellh * i) + ""));
+            sb2.append(HTemplate.replace("{0}", i + "").replace("{1}", change(cellh * i) + ""));
         }
         sb2.append(HTemplate.replace("{0}", "1080").replace("{1}", h + ""));
         sb2.append("</resources>");

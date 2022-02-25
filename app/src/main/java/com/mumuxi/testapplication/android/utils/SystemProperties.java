@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 /**
  * @author mumuxi
- * @date 2019/7/18
+ * @version 2019/7/18
  */
 public class SystemProperties {
     private static final String TAG = SystemProperties.class.getSimpleName();

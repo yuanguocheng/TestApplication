@@ -6,12 +6,13 @@ import java.nio.FloatBuffer;
 
 /**
  * @author mumuxi
- * @date   2021/4/13
+ * @version 2021/4/13
  */
 public class RecordUtils {
     /**
      * 获取录音的声音分贝值
      * 计算公式：dB = 20 * log(a / a0);
+     *
      * @return 声音分贝值
      */
     public static long getMaxDecibels(byte[] input) {

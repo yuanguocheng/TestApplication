@@ -16,7 +16,7 @@ import butterknife.ButterKnife;
 
 /**
  * @author mumuxi
- * @date 2019/7/7
+ * @version 2019/7/7
  * <p>
  * 1.ButterKnife使用
  * 2.App启动时间测试

@@ -1,7 +1,10 @@
 package com.mumuxi.testapplication.javabase.designmodel.singletontest;
+
 /**
- * Created by mumuxi on 2019/7/4
  * 懒汉模式 非线程安全
+ *
+ * @author mumuxi
+ * @version 2022/2/25
  */
 public class LazyUnsafe {
     private static LazyUnsafe instance;

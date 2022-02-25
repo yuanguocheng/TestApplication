@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * @author mumuxi
- * @date 2019/10/6
+ * @version 2019/10/6
+ * <p>
  * 内存优化
  * 1.数据类型的选择，选择最优数据类型
  * 1.1 Sparse数组 代替hashmap (hashmap 更耗内存，但是执行时间更快，这个需要权衡，hashmap可以到处到其他android
@@ -69,7 +70,7 @@ import androidx.appcompat.app.AppCompatActivity;
  * 3.启用StrictMode来检测内存问题。
  * 4. dumpsys meminfo + packagename 来查看应用内存使用信息
  * Pss : 应用程序占用的内存总大小
- *
+ * <p>
  * 5.adb shell dumpsys procstats packagename --hours 3 查看过去三小时内的内存变化情况
  */
 public class MemoryOptimizeTest extends AppCompatActivity {

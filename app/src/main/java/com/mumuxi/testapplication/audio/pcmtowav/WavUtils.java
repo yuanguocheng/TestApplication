@@ -11,7 +11,7 @@ import java.io.RandomAccessFile;
 
 /**
  * @author mumuxi
- * @date   2021/4/13
+ * @version 2021/4/13
  */
 public class WavUtils {
 
@@ -27,8 +27,10 @@ public class WavUtils {
      * @param channels      audioRecord的频道数量
      * @param sampleBits    位宽
      */
-    public static byte[] generateWavFileHeader(int totalAudioLen, int sampleRate, int channels, int sampleBits) {
-        WavHeader wavHeader = new WavHeader(totalAudioLen, sampleRate, (short) channels, (short) sampleBits);
+    public static byte[] generateWavFileHeader(int totalAudioLen, int sampleRate, int channels,
+                                               int sampleBits) {
+        WavHeader wavHeader = new WavHeader(totalAudioLen, sampleRate, (short) channels,
+                (short) sampleBits);
         return wavHeader.getHeader();
     }
 
@@ -237,7 +239,8 @@ public class WavUtils {
 
         public byte[] getHeader() {
             byte[] result;
-            result = ByteUtils.merger(ByteUtils.toBytes(riffChunkId), ByteUtils.toBytes(riffChunkSize));
+            result = ByteUtils.merger(ByteUtils.toBytes(riffChunkId),
+                    ByteUtils.toBytes(riffChunkSize));
             result = ByteUtils.merger(result, ByteUtils.toBytes(riffType));
             result = ByteUtils.merger(result, ByteUtils.toBytes(formatChunkId));
             result = ByteUtils.merger(result, ByteUtils.toBytes(formatChunkSize));

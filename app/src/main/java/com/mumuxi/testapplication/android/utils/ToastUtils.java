@@ -6,9 +6,8 @@ import android.view.Gravity;
 import android.widget.Toast;
 
 /**
- * Toast工具
- *
  * @author mumuxi
+ * @version 2022/2/25
  */
 public class ToastUtils {
 

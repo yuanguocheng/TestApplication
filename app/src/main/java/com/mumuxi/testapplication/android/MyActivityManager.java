@@ -12,9 +12,9 @@ import java.util.List;
 
 /**
  * @author mumuxi
- * @date 2020/11/21
- * * 通过注册Application.ActivityLifecycleCallbacks的回调可以监听
- * * 应用本身的activity界面变化，实现对activity的控制
+ * @version 2020/11/21
+ * 通过注册Application.ActivityLifecycleCallbacks的回调可以监听
+ * 应用本身的activity界面变化，实现对activity的控制
  */
 public class MyActivityManager implements Application.ActivityLifecycleCallbacks {
 

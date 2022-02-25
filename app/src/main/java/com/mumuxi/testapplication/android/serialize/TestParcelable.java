@@ -5,7 +5,8 @@ import android.os.Parcelable;
 
 /**
  * @author mumuxi
- * @date 2019/7/8
+ * @version 2019/7/8
+ * <p>
  * 1.反序列化是生成了一个新的对象,跟原对象只是内容上的一致，并不是同一个对象
  * 2.Parcelable 是 android的序列化方式，缺点使用麻烦，但效率高，parcelable主要用在内存序列化上，
  * 通过parcelable将对象序列化到存储设备中或者将对象序列化后通过网络传输也都是可以的，但过程稍复杂，

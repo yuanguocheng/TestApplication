@@ -8,9 +8,10 @@ import androidx.annotation.IntDef;
 import androidx.annotation.StringDef;
 
 /**
- * @author mumuxi
- * @date 2019/10/4
  * 注解例子，用IntDef、StringDef代替枚举
+ *
+ * @author mumuxi
+ * @version 2019/10/4
  */
 public class DefExample {
 
@@ -36,7 +37,6 @@ public class DefExample {
         }
         return day;
     }
-
 
 
     public static final String TAG_DAY_SELECTED = "daySelected";

@@ -8,11 +8,11 @@ import com.mumuxi.testapplication.android.utils.LogUtil;
 
 /**
  * @author mumuxi
- * @date   2019/9/14
- *
+ * @version 2019/9/14
+ * <p>
  * 使用命令行查看当前所有Activity的命令
  * adb shell dumpsys activity
-*/
+ */
 public class TestActivity2 extends Activity {
 
     private static final String TAG = TestActivity2.class.getSimpleName();
@@ -28,13 +28,13 @@ public class TestActivity2 extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        LogUtil.d(TAG,"onStart");
+        LogUtil.d(TAG, "onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        LogUtil.d(TAG,"onResume");
+        LogUtil.d(TAG, "onResume");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -45,19 +45,19 @@ public class TestActivity2 extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        LogUtil.d(TAG,"onPause");
+        LogUtil.d(TAG, "onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        LogUtil.d(TAG,"onStop");
+        LogUtil.d(TAG, "onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        LogUtil.d(TAG,"onDestroy");
+        LogUtil.d(TAG, "onDestroy");
     }
 
     @Override

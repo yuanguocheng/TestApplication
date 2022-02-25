@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * @author mumuxi
- * @date   2021/4/13
+ * @version 2021/4/13
  */
 public class ByteUtils {
 
@@ -65,10 +65,7 @@ public class ByteUtils {
     }
 
     public static int toInt(byte[] src, int offset) {
-        return ((src[offset] & 0xFF)
-                | ((src[offset + 1] & 0xFF) << 8)
-                | ((src[offset + 2] & 0xFF) << 16)
-                | ((src[offset + 3] & 0xFF) << 24));
+        return ((src[offset] & 0xFF) | ((src[offset + 1] & 0xFF) << 8) | ((src[offset + 2] & 0xFF) << 16) | ((src[offset + 3] & 0xFF) << 24));
     }
 
     public static int toInt(byte[] src) {

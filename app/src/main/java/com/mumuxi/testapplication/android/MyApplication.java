@@ -6,8 +6,8 @@ import android.content.Context;
 import com.mumuxi.testapplication.android.utils.LogUtil;
 
 /**
- * Created by mumuxi on 2019/7/7
- * Describe
+ * @author mumuxi
+ * @version 2022/2/25
  */
 public class MyApplication extends Application {
 
