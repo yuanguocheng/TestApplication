@@ -25,6 +25,14 @@
         <activity android:name=".android.fourcomponent.activity.TestActivity" />
         <activity android:name=".android.fourcomponent.activity.TestActivity2" />
 
+        <receiver
+            android:name=".android.fourcomponent.broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.test" />
+            </intent-filter>
+        </receiver>
         <service
             android:name=".android.fourcomponent.service.MyService"
             android:enabled="true"
