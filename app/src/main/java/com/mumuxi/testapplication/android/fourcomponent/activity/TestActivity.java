@@ -137,6 +137,11 @@ public class TestActivity extends Activity {
         super.onDestroy();
     }
 
+    /**
+     * 当Activity得到或者失去焦点的时候，就会回调该方法！
+     * 如果我们想监控Activity是否加载完毕，就可以用到这个方法了
+     * @param hasFocus
+     */
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -171,7 +176,7 @@ public class TestActivity extends Activity {
 
 
     /**
-     * 通过startactivityforresult启动另一个activity时可以通过重写这个方法获得范湖的数据
+     * 通过startactivityforresult启动另一个activity时可以通过重写这个方法获得返回的数据
      *
      * @param requestCode
      * @param resultCode
