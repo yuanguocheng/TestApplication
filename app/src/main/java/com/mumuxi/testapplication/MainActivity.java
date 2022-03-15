@@ -1,4 +1,4 @@
-package com.mumuxi.testapplication.android;
+package com.mumuxi.testapplication;
 
 import android.app.Activity;
 import android.content.Intent;

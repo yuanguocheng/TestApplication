@@ -1,10 +1,8 @@
-package com.mumuxi.testapplication.android;
+package com.mumuxi.testapplication;
 
 import android.content.Context;
 import android.os.Process;
 import android.util.Log;
-
-import com.mumuxi.testapplication.BuildConfig;
 
 /**
  * 定义CrashHandler监听应用的crash信息
