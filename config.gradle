@@ -4,7 +4,7 @@ ext{
     // Support library and architecture components support minSdk 14 and above.
     compileSdkVersion = 28
     buildToolsVersion = '28.0.3'
-    minSdkVersion = 15
+    minSdkVersion = 21
     targetSdkVersion = 27
     versionCode = 2
     versionName = '1.0.2'
