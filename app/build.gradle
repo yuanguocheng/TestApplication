@@ -82,6 +82,10 @@ android {
         javaMaxHeapSize "2g"
     }
 
+    viewBinding {
+        enabled = true
+    }
+
 }
 
 dependencies {
