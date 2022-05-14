@@ -25,4 +25,8 @@ public class DoubleCheck {
         }
         return singleton;
     }
+
+    private void test(){
+        System.out.println("test");
+    }
 }
