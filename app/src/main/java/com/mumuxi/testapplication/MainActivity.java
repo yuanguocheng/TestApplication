@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.mumuxi.testapplication.R;
 import com.mumuxi.testapplication.android.fourcomponent.activity.TestActivity;
+import com.mumuxi.testapplication.android.utils.LauncherTimer;
 import com.mumuxi.testapplication.android.utils.LogUtil;
 
 import butterknife.BindView;
@@ -112,6 +113,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             default:
                 break;
+        }
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+            LauncherTimer.endRecord("onWindowFocusChanged");
         }
     }
 

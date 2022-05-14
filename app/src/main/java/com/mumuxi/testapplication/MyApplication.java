@@ -3,6 +3,7 @@ package com.mumuxi.testapplication;
 import android.app.Application;
 import android.content.Context;
 
+import com.mumuxi.testapplication.android.utils.LauncherTimer;
 import com.mumuxi.testapplication.android.utils.LogUtil;
 
 /**
@@ -18,6 +19,7 @@ public class MyApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
+        LauncherTimer.startRecord();
     }
 
     @Override
